@@ -504,3 +504,153 @@ h6 {
 [data-theme="dark"] .btn-view-more {
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
+
+/* Packages Section */
+.packages {
+    background-color: var(--light-gray);
+    position: relative;
+}
+
+.package-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.package-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-coral);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.package-badge.luxury {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+}
+
+.package-badge.family {
+    background: linear-gradient(45deg, var(--primary-teal), #2ecc71);
+}
+
+.package-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.package-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.package-card:hover .package-img img {
+    transform: scale(1.1);
+}
+
+.package-content {
+    padding: 25px;
+}
+
+.package-content h3 {
+    color: var(--primary-teal);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.package-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.package-features span {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+.package-features i {
+    color: var(--accent-coral);
+    margin-right: 5px;
+}
+
+.package-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.package-rating {
+    color: #ffd700;
+}
+
+.package-rating span {
+    color: var(--dark-gray);
+    margin-left: 5px;
+}
+
+.package-price {
+    text-align: right;
+}
+
+.package-price .price {
+    color: var(--accent-coral);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.package-price small {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+.btn-book-now {
+    background: linear-gradient(45deg, var(--primary-teal), var(--accent-coral));
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-book-now:hover {
+    background: linear-gradient(45deg, var(--accent-coral), var(--primary-teal));
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .package-card {
+    background-color: var(--white);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .package-features span {
+    color: var(--dark-gray);
+}
+
+[data-theme="dark"] .package-footer {
+    border-top-color: rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .packages {
+    background-color: var(--light-blue);
+}
